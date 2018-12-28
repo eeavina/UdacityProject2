@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -7,6 +7,7 @@
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -16,71 +17,106 @@
         </header>
 
         <section class="score-panel">
-        	<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        	</ul>
+            <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
 
-        	<span class="moves">3</span> Moves
+            <span class="moves">0</span> Moves
+
+            <span> </span>
+
+            <time id="startTimer">00:00:00</time>
 
             <div class="restart">
-        		<i class="fa fa-repeat"></i>
-        	</div>
+                <i class="fa fa-repeat"></i>
+            </div>
+
+            <div class="container">
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content center">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Congratulations, you won!</h4>
+                            </div>
+                            <div class="modal-body">
+                                with
+                                <span id="numberOfMoves"></span>
+                                moves,
+                                <span id="visibleStars"></span>
+                                stars and within
+                                <span id="finalTime"></span>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default modal-btn" id="playAgain">Play again</button>
+
+                                <button type="button" class="btn btn-default modal-btn" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <ul class="deck">
             <li class="card">
-                <i class="fa fa-diamond"></i>
+                <i class="fa fa-diamond center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card match">
-                <i class="fa fa-anchor"></i>
+                <i class="fa fa-paper-plane-o center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-bolt"></i>
+                <i class="fa fa-anchor center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-cube"></i>
-            </li>
-            <li class="card match">
-                <i class="fa fa-anchor"></i>
+                <i class="fa fa-bolt center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-leaf"></i>
+                <i class="fa fa-cube center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-bicycle"></i>
+                <i class="fa fa-anchor center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-diamond"></i>
+                <i class="fa fa-leaf center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-bomb"></i>
+                <i class="fa fa-bicycle center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-leaf"></i>
+                <i class="fa fa-diamond center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card open show">
-                <i class="fa fa-bolt"></i>
+                <i class="fa fa-bomb center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-bicycle"></i>
+                <i class="fa fa-leaf center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
+                <i class="fa fa-bomb center"></i>
             </li>
             <li class="card">
-                <i class="fa fa-cube"></i>
+                <i class="fa fa-bolt center"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bicycle center"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-paper-plane-o center"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-cube center"></i>
             </li>
         </ul>
     </div>
 
     <script src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
