@@ -1,5 +1,5 @@
 # UdacityProject2
-## Udacity-Google Nanodegree Project / Web Foundations
+## Udacity-Google Nanodegree Project / Web Programming with JavaScript
 
 # 1 out of 5 modules
 * Web Foundations
